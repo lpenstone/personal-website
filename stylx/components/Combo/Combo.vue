@@ -1,5 +1,5 @@
 <template>
-  <div ref="combo" class="combo__wrap" :class="['combo__wrap--' + asClass, 'combo__wrap--' + size, {'combo__img--landscape': isLandscape}, {'combo__wrap--center': isCenter}]">
+  <div class="combo__wrap" :class="['combo__wrap--' + asClass, 'combo__wrap--' + size, {'combo__wrap--center': isCenter}]">
     <slot></slot>
   </div>
 </template>
@@ -18,9 +18,7 @@ export default {
     }
   },
   data () {
-    return {
-      isLandscape: false
-    }
+    return {}
   },
   computed: {
     isCenter: function () {
@@ -31,20 +29,6 @@ export default {
         return this.as.replace('-center', '')
       }
       return this.as
-    }
-  },
-  mounted: function () {
-    this.getImgDimensions()
-  },
-  methods: {
-    getImgDimensions: function () {
-      const combo = this.$refs.combo
-      const img = combo.getElementsByTagName('img')[0]
-
-      if (img) {
-        const landscape = img.naturalHeight < img.naturalWidth
-        this.isLandscape = landscape
-      }
     }
   }
 }

@@ -8,6 +8,20 @@
             <p>I'm Laura.</p>
             <p>A frontend developer with a wide range of artistic hobbies and interests.</p>
             <p>Currently working in Toronto, Canada 🇨🇦 with my <x-link href="https://en.wikipedia.org/wiki/Potcake_dog" target="_blank">potcake</x-link> dog Kipper.</p>
+            <x-see-more label="..." as="plain" class="margin-top--20">
+              <strong>More?!</strong>
+              <p class="margin-top--10">I am passionate about teaching others and making the world of web developement accessible to people of all backgrounds.</p>
+              <p>I value and foster a diverse and inclusive workplace.</p>
+              <x-combo as="circle" size="sm" class="margin-top--10 margin-bottom--10">
+                <x-combo-img landscape>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Potcakedog.jpg/1920px-Potcakedog.jpg" alt="">
+                </x-combo-img>
+                <x-combo-text>
+                  <p>Here's a bonus photo of Kipper!</p>
+                  <p>He was adopted in 2017 as a street dog from Saint Vincent and the Grenadines.</p>
+                </x-combo-text>
+              </x-combo>
+            </x-see-more>
           </div>
         </x-group>
       </x-content>
