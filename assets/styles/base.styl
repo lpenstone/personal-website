@@ -93,17 +93,17 @@ body
 
 /* ---- MARGINS ---- */
 
-  for num in (5 10 20 30 40 50)
-    .margin--top-{num}
+  for num in (5 10 20 30 40 50 60 70)
+    .margin-top--{num}
       margin-top: (num)px
 
-    .margin--bottom-{num}
+    .margin-bottom--{num}
       margin-bottom: (num)px
 
-    .margin--left-{num}
+    .margin-left--{num}
       margin-left: (num)px
 
-    .margin--right-{num}
+    .margin-right--{num}
       margin-right: (num)px
 
   .margin--center
@@ -121,8 +121,28 @@ body
     display: inline-block
     width: 100%
 
-  .text-align-center
+  .visually-hidden
+    clip: rect(0 0 0 0)
+    clip-path: inset(50%)
+    height: 1px
+    overflow: hidden
+    position: absolute
+    white-space: nowrap
+    width: 1px
+
+
+  .text-align--center
     text-align: center
+
+  .text-align--left
+    text-align: left
+
+  .text-align--right
+    text-align: right
+
+  .code-text
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono, Courier New, sans-serif
+    color: $med-grey
 
   ul
     margin: 0px
@@ -144,5 +164,8 @@ body
     ul li
       &:before
         color: $brand-light
+
+    .code-text
+      color: darken($copy-dm, 30%)
 
 dump_media_cache()

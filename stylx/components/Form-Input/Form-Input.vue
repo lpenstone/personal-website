@@ -1,19 +1,27 @@
 <template>
   <div class="input__wrap">
-    <label class="input__label" :for="name">{{label}}</label>
+    <label v-if="label"
+      class="input__label"
+      :class="{'input__label--error': !valid}"
+      :for="name">{{label}} <span v-if="!required" class="optional">(Optional)</span></label>
     <textarea v-if="inputType === 'textarea'"
-      class="input__item"
+      v-model="model"
+      :class="['input__item', 'input__item--' + size, {'input__item--error': !valid}]"
       :name="name"
       :id="name"
       rows="5"
       style="resize: none"
       :placeholder="placeholder"></textarea>
     <input v-else
-      class="input__item"
+      v-model="model"
+      :class="['input__item', 'input__item--' + size, {'input__item--error': !valid}]"
       :type="type || as"
       :name="name"
       :id="name"
       :placeholder="placeholder">
+    <div v-if="!valid" class="error__wrap">
+      <p>{{error}}</p>
+    </div>
   </div>
 </template>
 
@@ -29,6 +37,10 @@ export default {
       type: String,
       default: ''
     },
+    size: {
+      type: String,
+      default: 'md'
+    },
     name: {
       type: String,
       required: true
@@ -38,17 +50,42 @@ export default {
     },
     placeholder: {
       type: String
+    },
+    required: {
+      type: Boolean,
+      default: false
+    },
+    error: {
+      type: String,
+      default: 'This is a required field'
     }
   },
   data () {
-    return {}
+    return {
+      model: ''
+    }
   },
   computed: {
     inputType: function () {
       return this.type || this.as
-    // },
-    // isInput: function () {
-    //   return ['text', 'email', 'password'].indexOf(this.inputType) > -1
+    },
+    valid: function () {
+      if (this.required) return !!this.model
+      return true
+    }
+  },
+  methods: {
+    clearInput: function () {
+      this.model = ''
+    },
+    setInput: function (value) {
+      this.model = value
+    }
+  },
+  watch: {
+    model: function (value) {
+      this.$emit('model', value)
+      this.$parent.$emit('formData', {name: this.name, value: value})
     }
   }
 }

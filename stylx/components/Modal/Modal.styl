@@ -3,6 +3,9 @@
 .modal-button__wrap
   display: inline-block
 
+  &.modal-button__wrap--none
+    display: none
+
 .modal
   position: fixed
   top: 0
@@ -66,7 +69,18 @@
 .modal__content
   margin: 0px auto 0px
   padding: 30px 50px 35px
+
   @media(max-width: 676px)
     padding: 30px 7%
+
+  img
+    width: auto 
+    max-width: 100%
+    max-height: 75vh
+
+  >>>.item img
+    width: auto 
+    max-width: 100%
+    max-height: 75vh
 
 dump_media_cache()

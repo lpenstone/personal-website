@@ -1,6 +1,8 @@
 <template>
-  <div class="card" :class="[{'card--shadow': as === 'shadow'}, 'card--' + size]">
-    <slot></slot>
+  <div class="card" :class="'card--' + as">
+    <div class="card__content" :class="'card__content--' + size">
+      <slot></slot>
+    </div>
   </div>
 </template>
 

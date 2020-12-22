@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="nav" :class="{'nav--open': isMenuOpen}">
+    <nav class="nav" :class="[{'nav--open': isMenuOpen}, {'scrolled': scrolled}]">
       <div class="nav__wrap">
         <div class="nav__content">
           <div class="nav__items nav__items--left">
@@ -12,8 +12,8 @@
               </router-link>
             </div>
             <div class="nav__item nav__item--mobile-menu">
-              <x-button as="icon" id="close" @clicked="toggleMenu">x</x-button>
-              <x-button as="plain" id="menu" @clicked="toggleMenu">
+              <x-button as="icon" id="close" @click="toggleMenu">x</x-button>
+              <x-button as="plain" id="menu" @click="toggleMenu">
                 <i class="fas fa-bars"></i>
               </x-button>
             </div>
@@ -21,8 +21,8 @@
               <slot name="links">
                 <ul>
                   <li v-for="(route, name) in routes" v-bind:key="name">
-                    <x-link
-                      v-if="route.path !== '/' && route.path !== '/success'"
+                    <x-link as="link-alt"
+                      v-if="route.path !== '/' && route.path !== '/z-demo'"
                       :to="{name: route.name}">
                       {{route.name | sanitize}}
                     </x-link>
@@ -44,7 +44,7 @@
         </div>
       </div>
     </nav>
-    <div class="nav__dummy-bar"></div>
+    <!-- <div class="nav__dummy-bar"></div> -->
   </div>
 </template>
 
@@ -67,8 +67,13 @@ export default {
   data () {
     return {
       routes: this.$router.options.routes,
-      open: false
+      open: false,
+      scrolled: false
     }
+  },
+  mounted: function () {
+    document.addEventListener("scroll", this.scrollHandler)
+    this.scrollHandler()
   },
   computed: {
     name: function () {
@@ -84,6 +89,14 @@ export default {
   methods: {
     toggleMenu: function () {
       this.$store.commit('toggleMenu')
+    },
+    scrollHandler: function () {
+      let y = window.scrollY
+      if (y > 60) {
+        if (!this.scrolled) this.scrolled = true
+      } else {
+        if (this.scrolled) this.scrolled = false
+      }
     }
   }
 }

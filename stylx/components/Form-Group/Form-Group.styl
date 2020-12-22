@@ -1,14 +1,40 @@
 @import '~@/assets/styles/variables'
 
+.error__wrap
+  display: none
+  color: $error
+  font-size: 0.9em
+
+  p:last-of-type
+    margin-bottom: 0
+
+.form--errors
+  .error__wrap
+    display: block
+
+  .select--error
+    border-color: $error
+
+.optional
+  font-style: italic
+  font-weight: normal
+  opacity: 0.5
+
 .select__wrap
   position: relative
-  margin-bottom: 10px
+  margin-bottom: 20px
+
+.select-caret__wrap
+  position: relative 
 
   &:before
-    content: "\21A9"
+    content: ""
     position: absolute 
+    border: 7px solid transparent
+    border-top-color: $copy
+    opacity: 0.5
     right: 10px
-    bottom: 7px
+    top: 43%
     display: block
     z-index: 0
 
@@ -55,7 +81,7 @@
   border: 0
   padding: 0
   margin: 0
-  margin-bottom: 10px
+  margin-bottom: 20px
 
 .group__legend
   font-size: 0.9em

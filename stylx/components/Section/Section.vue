@@ -1,5 +1,5 @@
 <template>
-  <section class="section" :class="['section--' + size, 'section--bg-' + as]">
+  <section class="section" :class="['section--' + size, 'section--bg-' + bg, {'mode--dark': dark}, {'top': top}]">
     <div class="section__inner">
       <slot></slot>
     </div>
@@ -16,9 +16,20 @@ export default {
     },
     size: {
       type: String,
-      default: function () {
-        return this.$store.state.btnDefaultSize || 'md'
-      }
+      default: 'md'
+    },
+    top: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    bg: function () {
+      if (this.as === 'dark') return 'standard'
+      return this.as.split('-')[0]
+    },
+    dark: function () {
+      return this.as.indexOf('dark') > -1
     }
   },
   data () {

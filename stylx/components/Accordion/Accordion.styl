@@ -3,35 +3,57 @@
 .accordion
   margin-bottom: 5px
 
+.accordion--minimal
+  .accordion__label
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid $accordion
+
+    &:hover, &:focus
+      border: none
+      border-bottom: 1px solid $brand
+
+  &.accordion--expanded
+    .accordion__label
+      border-bottom: transparent
+
+    .accordion__content-wrap
+      border-top: 2px solid $brand
+
+.accordion--standard
+  .accordion__label
+    background-color: $accordion
+    border: 1px solid $accordion
+    background-color: $accordion
+    border: 1px solid $accordion
+    border-radius: 4px
+
+    &:hover, &:focus
+      border: 1px solid $accordion-hover
+      background-color: $accordion-hover
+
+  &.accordion--expanded
+    .accordion__content-wrap
+      border: 1px solid $accordion
+      border-top: 2px solid $brand
+
 .accordion__label
   position: relative
   width: 100%
-  background-color: $accordion
-  font-size: 1em
-  border: 1px solid $accordion
-  border-radius: 4px
-  padding: 10px 12px
   text-align: left
   outline: none
   cursor: pointer
+  font-family: $font-copy
 
   &:after
     content: '+'
     color: $brand
     position: absolute 
-    right: 10px
-
-  &:hover, &:focus
-    border: 1px solid $accordion-hover
-    background-color: $accordion-hover
 
 .accordion__content-wrap
   max-height: 0
   overflow: hidden
   border: 0
-
-.accordion__content
-  padding: 10px 12px
 
 .accordion--expanded
   .accordion__label
@@ -42,29 +64,65 @@
       content: '-'
 
   .accordion__content-wrap
-    border: 1px solid $accordion
-    border-top: 2px solid $brand
     max-height: 3000px
     border-bottom-right-radius: 4px
     border-bottom-left-radius: 4px
     transition 0.7s max-height ease-in-out
 
+.accordion--sm
+  .accordion__label
+    padding: 6px 8px
+    font-size: 0.9em
+
+    &:after
+      right: 8px
+
+  .accordion__content
+    padding: 8px
+    font-size: 0.9em
+
+.accordion--md
+  .accordion__label
+    padding: 10px 12px
+    font-size: 1em
+
+    &:after
+      right: 10px
+
+  .accordion__content
+    padding: 10px 12px
+
+.accordion--lg
+  .accordion__label
+    padding: 16px 18px
+    font-size: 1.2em
+
+    &:after
+      right: 16px
+
+  .accordion__content
+    padding: 16px 18px
+
 .mode--dark
   .accordion__label
     color: $copy-dm
-    background-color: $accordion-dm
-    border: 1px solid $accordion-dm
 
-    &:after
-      color: $brand-xxlight
-
-    &:hover, &:focus
-      border: 1px solid $accordion-hover-dm
-      background-color: $accordion-hover-dm
-
-  .accordion--expanded
-    .accordion__content-wrap
+  .accordion--standard
+    .accordion__label
+      color: $copy-dm
+      background-color: $accordion-dm
       border: 1px solid $accordion-dm
-      border-top: 2px solid $brand-xlight
+
+      &:after
+        color: $brand-xxlight
+
+      &:hover, &:focus
+        border: 1px solid $accordion-hover-dm
+        background-color: $accordion-hover-dm
+
+    &.accordion--expanded
+      .accordion__content-wrap
+        border: 1px solid $accordion-dm
+        border-top: 2px solid $brand-xlight
 
 dump_media_cache()

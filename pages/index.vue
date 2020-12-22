@@ -2,112 +2,140 @@
   <div>
     <x-section as="hero" id="hero">
       <x-content>
-        <div class="margin--top-40">
-          <h1>Hello 👋</h1>
-          <p>I'm Laura!</p>
-          <p>A frontend developer with a wide range of artistic hobbies and interests.</p>
-          <p>Currently living in Toronto, Canada 🇨🇦 with my dog Kipper.</p>
-        </div>
+        <x-group class="margin-top--40">
+          <div>
+            <h1>Welcome 👋</h1>
+            <p>I'm Laura.</p>
+            <p>A frontend developer with a wide range of artistic hobbies and interests.</p>
+            <p>Currently working in Toronto, Canada 🇨🇦 with my <x-link href="https://en.wikipedia.org/wiki/Potcake_dog" target="_blank">potcake</x-link> dog Kipper.</p>
+          </div>
+        </x-group>
       </x-content>
     </x-section>
-    <x-section>
+    <x-section size="lg">
       <x-content class="text-align-center">
-        <x-element as="center">
-          <x-carousel items="2" height="240">
+        <x-group as="center">
+          <x-carousel height="240" name="about-me">
             <x-carousel-item>
-              <h2 class="margin--bottom-20">Frontend Developer</h2>
+              <h2 class="margin-bottom--20">Frontend Developer</h2>
               <p>3+ years of industry experience.</p>
               <p>Writing scalable, tested, component-based code.</p>
               <p>Developing UI's with a focus on accessibility and delight.</p>
-              <div class="margin--top-10">
-                <x-tag class="margin--top-10">HTML</x-tag>
-                <x-tag class="margin--top-10">CSS/Stylus</x-tag>
-                <x-tag class="margin--top-10">Javascript</x-tag>
-                <x-tag class="margin--top-10">Vue.js</x-tag>
-                <x-tag class="margin--top-10">Nuxt.js</x-tag>
-                <x-tag class="margin--top-10">Web sockets</x-tag>
-                <x-tag class="margin--top-10">Cypress</x-tag>
-                <x-tag class="margin--top-10">Headless CMS</x-tag>
-                <x-tag class="margin--top-10">Webpack</x-tag>
-                <x-tag class="margin--top-10">Git</x-tag>
-                <x-tag class="margin--top-10">Design systems</x-tag>
+              <div class="margin-top--20">
+                <x-tag class="margin-top--10">
+                  Javascript &amp; tools
+                  <x-tag-label>
+                    <p>Experience with Javascript, jQuery, Vue.js, Nuxt.js, Pug, Liquid.</p>
+                    <p>Writing Javascript on a daily basis in a Vue.js project.</p>
+                  </x-tag-label>
+                </x-tag>
+                <x-tag class="margin-top--10">
+                  Developing UIs
+                  <x-tag-label>
+                    <p>HTML5, CSS3, CSS preprocessors (<x-link href="https://stylus-lang.com/" target="_blank">Stylus</x-link>, Sass), building component-based projects.</p>
+                  </x-tag-label>
+                </x-tag>
+                <x-tag class="margin-top--10">
+                  e2e testing
+                  <x-tag-label>
+                    <p>Introduced <x-link href="cypress" target="_blank">Cypress</x-link> e2e testing in my current role. The tests trigger automatically with PR's as part of our CI/CD flow.</p>
+                  </x-tag-label>
+                </x-tag>
+                <x-tag class="margin-top--10">
+                  CMS
+                  <x-tag-label>
+                    <p><x-link href="https://buttercms.com/" target="_blank">Butter CMS</x-link> integration, enabling non-technical members to create and release marketing pages independently using existing, flexible components.</p>
+                  </x-tag-label>
+                </x-tag>
+                <x-tag class="margin-top--10">
+                  Git
+                  <x-tag-label>
+                    <p>Vital tool in current development workflow.</p>
+                    <p>Experience with Github and <x-link href="https://bitbucket.org/" target="_blank">Bitbucket</x-link> web UI's.</p>
+                  </x-tag-label>
+                </x-tag>
+                <x-tag class="margin-top--10">
+                  Design systems
+                  <x-tag-label>
+                    <p>Developing design systems to ensure projects are set-up for success. Build faster, cleaner, more consistently, and with scale in mind. I've built <x-link href="https://www.stylx.dev/" target="_blank">my own component library.</x-link></p>
+                  </x-tag-label>
+                </x-tag>
               </div>
             </x-carousel-item>
             <x-carousel-item>
-              <h2 class="margin--bottom-20">Instructor</h2>
-              <p>Delivering weekly lectures to students new to web development</p>
+              <h2 class="margin-bottom--20">Instructor</h2>
+              <p>Delivering weekly lectures to students new to web development at one of Canada's leading tech education companies</p>
               <p>Fostering an inclusive and casual learning environment</p>
-              <div class="margin--top-10">
-                <x-tag class="margin--top-10">Development flows</x-tag>
-                <x-tag class="margin--top-10">HTML</x-tag>
-                <x-tag class="margin--top-10">CSS</x-tag>
-                <x-tag class="margin--top-10">Ruby</x-tag>
-                <x-tag class="margin--top-10">Sinatra</x-tag>
-                <x-tag class="margin--top-10">Active Record</x-tag>
-                <x-tag class="margin--top-10">Relational Databases</x-tag>
-                <x-tag class="margin--top-10">Deployment</x-tag>
+              <div class="margin-top--20">
+                <h3 class="h5 heading--accent">Curriculum topics:</h3>
+                <p>
+                  Development workflows (version control, git, pull requests),
+                  HTML,
+                  CSS,
+                  Ruby,
+                  <x-link href="http://sinatrarb.com/" target="_blank">Sinatra</x-link>,
+                  <x-link href="https://guides.rubyonrails.org/active_record_querying.html#what-is-the-active-record-query-interface-questionmark" target="_blank">Active Record</x-link>,
+                  Relational Databses,
+                  Deployment
+                </p>
+              </div>
+            </x-carousel-item>
+            <x-carousel-item>
+              <h2 class="margin-bottom--20">Artisan</h2>
+              <p>Creating art with digital and traditional mediums</p>
+              <p>I frequently experiment with different mediums, with my current focus being on printmaking</p>
+              <div class="margin-top--20 margin-bottom--30">
+                <x-tag class="margin-top--10">
+                  Illustration
+                  <x-tag-label>
+                    <p>Drawing illustrations using <x-link href="https://procreate.art/" target="_blank">Procreate</x-link> on my iPad.</p>
+                  </x-tag-label>
+                </x-tag>
+                <x-tag class="margin-top--10">
+                  Linocut
+                  <x-tag-label>
+                    <p>Printmaking technique: A design is carved into a soft linoleum block. Ink is used to transfer the design onto paper.</p>
+                  </x-tag-label>
+                </x-tag>
+                <x-tag class="margin-top--10">
+                  Watercolour
+                  <x-tag-label>
+                    <p>Creating one-of-a-kind watercolour portraits of people's beloved pets.</p>
+                  </x-tag-label>
+                </x-tag>
+                <x-tag class="margin-top--10">
+                  Screenprinting
+                  <x-tag-label>
+                    <p>Creating custom screens with photo emulsion in a darkroom. The screens are used to transfer ink onto fabrics. I sew the resulting textiles into practical items.</p>
+                  </x-tag-label>
+                </x-tag>
               </div>
             </x-carousel-item>
           </x-carousel>
-        </x-element>
+        </x-group>
       </x-content>
     </x-section>
     <x-section>
+      <h2 class="heading--accent margin-bottom--60 text-align--center">Recent Projects</h2>
       <x-content>
-        <div class="row">
-          <div class="col-sm-12 col-md-7 margin--bottom-50">
-            <h3 class="heading--accent margin--bottom-20">Latest</h3>
-            <h4>Experimenting with a component library</h4>
-            <p>As an instructor for a web development class, I’ve entered a permanent headspace of asking "can this be simplified"? Mostly this has been in the context of breaking down difficult web concepts into familiar ideas or diagrams. Though, recently I’ve wondered how to simplify the website building process, without having to rely on a drag-and-drop tool. If I made a pre-styled component library, what would be the tradeoffs? If it becomes too flexible, the simplicity would get stripped away. However, if it’s too rigid, all resulting websites would look the same. Could I create a tool with simple syntax that would allow different websites to have a unique look and feel to suit its branding? This is what led me to create Stylx, which has been used to create this website as well.</p>
-            <p class="margin--top-20">Website coming soon</p>
-            <!-- <x-link href="test">Visit Stylx website</x-link> -->
-          </div>
-          <div class="col-sm-12 col-md-4 offset-md-1">
-            <x-card as="standard" size="sm">
-              <h3 class="heading--accent margin--bottom-20">Recent projects</h3>
-              <div>
-                <h4 class="h5">Stylx</h4>
-                <p>A pre-styled component library & design system to help developers create websites (like this one) fast.</p>
-                <x-see-more size="sm" label="More details">
-                  <p>Customizations are made in the stylx.config file to suit your brand. The components do the rest.</p>
-                  <p>Comes with <strong>dark mode, responsive styles, keyboard commands, and accessibility features</strong> out-of-the-box.</p>
-                  <div>
-                    <x-tag class="margin--top-10">Nuxt.js</x-tag>
-                    <x-tag class="margin--top-10">Design systems</x-tag>
-                    <x-tag class="margin--top-10">BEM</x-tag>
-                    <x-tag class="margin--top-10">Documentation</x-tag>
-                  </div>
-                  <p class="margin--top-20">Website coming soon</p>
-                  <!-- <ul class="margin--top-20">
-                    <li><x-link href="https://www.notion.so">Vist docs & download</x-link></li>
-                    <li><x-link href="https://www.github.com">Visit on Github</x-link></li>
-                  </ul> -->
-                </x-see-more>
-              </div>
-              <div class="margin--top-30">
-                <h4 class="h5">Ditto</h4>
-                <p>Video conferencing UI wrapper that allows guests to break off into smaller video call rooms, while maintaning context of the whole virtual event.</p>
-                <x-see-more size="sm" label="More details">
-                  <div>
-                    <x-tag class="margin--top-10">Vue.js</x-tag>
-                    <x-tag class="margin--top-10">Websockets</x-tag>
-                    <x-tag class="margin--top-10">JAM Stack</x-tag>
-                  </div>
-                  <ul class="margin--top-20">
-                    <li><x-link href="https://www.dittoevent.com" target="_blank">Visit webapp</x-link></li>
-                  </ul>
-                </x-see-more>
-              </div>
-            </x-card>
-          </div>
-        </div>
+        <recent-projects/>
       </x-content>
     </x-section>
   </div>
 </template>
 
 <script>
-export default {}
+import recentProjects from '../components/recent-projects/recent-projects'
+
+export default {
+  name: 'index',
+  components: {
+    'recent-projects': recentProjects
+  },
+  data () {
+    return {}
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -116,10 +144,10 @@ export default {}
   padding-top: 0
   padding-bottom: 0
   height: 90vh
-  max-height: 600px
+  max-height: 660px
 
   @media(max-width: 991px)
-    padding-top: 40px
+    padding-top: 120px
     padding-bottom: 60px
     height: auto
     max-height: auto

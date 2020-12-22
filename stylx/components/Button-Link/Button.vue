@@ -1,6 +1,10 @@
 <template>
-  <button class="btn" :class="['btn--' + as, 'btn--' + size]" @click="clicked()">
-    <slot></slot>
+  <button
+    class="btn"
+    :class="['btn--' + as, 'btn--' + size, {'btn--selected': selected}]"
+    @click="clicked()"
+    :aria-label="as === 'icon' ? icon || brand : ''">
+    <i v-if="icon" class="icon" :class="['fa', 'fa-' + icon, 'fa-' + size]"/><i v-else-if="brand" class="icon" :class="['fab', 'fa-' + brand, 'fa-' + size]"/><slot></slot>
   </button>
 </template>
 
@@ -14,12 +18,20 @@ export default {
     },
     size: {
       type: String,
-      default: function () {
-        return this.$store.state.config.btnDefaultSize || 'md'
-      }
+      default: 'md'
+    },
+    icon: {
+      type: String
+    },
+    brand: {
+      type: String
     },
     click: {
-      stype: String
+      type: String
+    },
+    selected: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -31,7 +43,7 @@ export default {
         this.$store.commit('openModal')
         return
       }
-      this.$emit('clicked', config)
+      this.$emit('click', config)
     }
   }
 }

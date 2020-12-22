@@ -1,29 +1,35 @@
 <template>
   <div>
-    <x-section as="hero">
-      <x-content class="text-align-center">
+    <x-section as="hero" size="lg" top>
+      <x-content class="text-align--center">
         <h1>Let's chat</h1>
         <p>Communication welcome via <x-link href="linkedin" target="_blank">LinkedIn</x-link> or message form below</p>
       </x-content>
     </x-section>
     <x-section>
       <x-content>
-        <x-element as="center" size="md">
+        <x-group as="center" size="md">
           <div v-if="success" class="text-align-center">
             <div class="h2">👏</div>
             <h2 class="h3">Thanks!</h2>
             <p>I look forward to reading your message, and I'll reply as soon as I can.</p>
-            <x-button @clicked="reset" class="margin--top-20">New message</x-button>
+            <x-button @clicked="reset" class="margin-top--20">New message</x-button>
           </div>
           <x-card v-else as="shadow" size="lg">
-            <h2 class="heading--title margin--bottom-20">Send a message</h2>
-            <x-form name="contact" netlify action="/contact/?notice=success">
-              <x-form-input as="text" name="name" label="Name"/>
-              <x-form-input as="email" name="email" label="Email"/>
-              <x-form-input as="textarea" name="message" label="Message"/>
+            <h2 class="heading--title margin-bottom--20">Send a message</h2>
+            <x-form as="submit" name="contact" netlify action="/contact/?notice=success">
+              <x-form-input as="text" name="name" label="Name" required/>
+              <x-form-input as="email" name="email" label="Email" required/>
+              <x-form-group as="select" name="subject" label="Subject">
+                <x-form-group-option name="art" label="Art inquiry"/>
+                <x-form-group-option name="business" label="Business inquiry"/>
+                <x-form-group-option name="hi" label="Saying hi"/>
+                <x-form-group-option name="other" label="Other"/>
+              </x-form-group>
+              <x-form-input as="textarea" name="message" label="Message" required/>
             </x-form>
           </x-card>
-        </x-element>
+        </x-group>
       </x-content>
     </x-section>
   </div>

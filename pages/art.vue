@@ -1,18 +1,18 @@
 <template>
   <div>
-    <x-section as="hero">
-      <x-content class="text-align-center">
-        <x-element as="center" size="sm">
+    <x-section as="hero" size="lg" top>
+      <x-content class="text-align--center">
+        <x-group as="center" size="sm">
           <h1>Art & Printmaking</h1>
           <p>I love making things with my hands.</p>
           <p>I frequently experiment with different mediums, with my current focus being on printmaking (linocut & screenprinting).</p>
-          <p class="margin--top-20">Shop coming soon</p>
-        </x-element>
+          <p class="margin-top--20">Shop coming soon</p>
+        </x-group>
       </x-content>
     </x-section>
     <x-section>
       <x-content>
-        <div class="text-align-center margin--top-30">
+        <div class="text-align--center margin-top--30">
           <h2 class="h4">Printmaking</h2>
           <h3 class="heading--accent">Linocut, screenpringting, sewing</h3>
           <x-grid as="gallery" cols="4" name="prints">
@@ -42,7 +42,7 @@
             </x-grid-item>
           </x-grid>
         </div>
-        <div class="text-align-center">
+        <div class="text-align--center">
           <h2 class="h4">Animal portraits</h2>
           <h3 class="heading--accent">Watercolour</h3>
           <x-grid as="gallery" name="portraits" cols="4">
