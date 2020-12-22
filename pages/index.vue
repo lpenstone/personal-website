@@ -12,7 +12,7 @@
         </x-group>
       </x-content>
     </x-section>
-    <x-section size="lg">
+    <x-section id="hats" size="lg">
       <x-content class="text-align-center">
         <x-group as="center">
           <x-carousel height="240" name="about-me">
@@ -116,6 +116,7 @@
       </x-content>
     </x-section>
     <x-section>
+      <x-icon as="secondary" icon="code" class="margin--center margin-bottom--20"/>
       <h2 class="heading--accent margin-bottom--60 text-align--center">Recent Projects</h2>
       <x-content>
         <recent-projects/>
@@ -174,5 +175,8 @@ export default {
 
       @media(max-width: 991px)
         background-image: none
+
+#hats
+  padding-bottom: 20px
 
 </style>

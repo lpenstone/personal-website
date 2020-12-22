@@ -3,16 +3,35 @@
     <x-section as="hero" size="lg" top>
       <x-content class="text-align--center">
         <x-group as="center" size="sm">
-          <h1>Art & Printmaking</h1>
+          <x-icon as="secondary" icon="stamp" class="margin--center margin-bottom--30"/>
+          <h1 class="margin-bottom--20">Art & Printmaking</h1>
           <p>I love making things with my hands.</p>
-          <p>I frequently experiment with different mediums, with my current focus being on printmaking (linocut & screenprinting).</p>
-          <p class="margin-top--20">Shop coming soon</p>
+          <p>I frequently experiment with different mediums, with my current focus being on printmaking (linocut & screenprinting) and digital illustrations.</p>
+          <p class="margin-top--20"><em>Shop coming soon</em></p>
         </x-group>
       </x-content>
     </x-section>
     <x-section>
       <x-content>
-        <div class="text-align--center margin-top--30">
+        <div class="text-align--center">
+          <h2 class="h4">Illustrated portraits</h2>
+          <h3 class="heading--accent">Digital - iPad</h3>
+          <x-grid as="gallery" name="illustration" cols="4">
+            <x-grid-item>
+              <img src="~@/assets/images/art/illustration1.png" alt="">
+            </x-grid-item>
+            <x-grid-item>
+              <img src="~@/assets/images/art/illustration2.png" alt="">
+            </x-grid-item>
+            <x-grid-item>
+              <img src="~@/assets/images/art/illustration3.png" alt="">
+            </x-grid-item>
+            <x-grid-item>
+              <img src="~@/assets/images/art/illustration4.png" alt="">
+            </x-grid-item>
+          </x-grid>
+        </div>
+        <div class="text-align--center margin-top--50">
           <h2 class="h4">Printmaking</h2>
           <h3 class="heading--accent">Linocut, screenpringting, sewing</h3>
           <x-grid as="gallery" cols="4" name="prints">
@@ -42,7 +61,7 @@
             </x-grid-item>
           </x-grid>
         </div>
-        <div class="text-align--center">
+        <div class="text-align--center margin-top--50">
           <h2 class="h4">Animal portraits</h2>
           <h3 class="heading--accent">Watercolour</h3>
           <x-grid as="gallery" name="portraits" cols="4">

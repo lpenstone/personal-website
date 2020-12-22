@@ -2,8 +2,9 @@
   <div>
     <x-section as="hero" size="lg" top>
       <x-content class="text-align--center">
+        <x-icon as="secondary" icon="comments" class="margin--center margin-bottom--30"/>
         <h1>Let's chat</h1>
-        <p>Communication welcome via <x-link href="linkedin" target="_blank">LinkedIn</x-link> or message form below</p>
+        <p>Communication welcome via <x-link href="https://www.linkedin.com/in/laura-penstone-073431111/" target="_blank">LinkedIn</x-link> or message form below</p>
       </x-content>
     </x-section>
     <x-section>
@@ -13,14 +14,14 @@
             <div class="h2">👏</div>
             <h2 class="h3">Thanks!</h2>
             <p>I look forward to reading your message, and I'll reply as soon as I can.</p>
-            <x-button @clicked="reset" class="margin-top--20">New message</x-button>
+            <x-button @clicked="reset()" class="margin-top--20">New message</x-button>
           </div>
           <x-card v-else as="shadow" size="lg">
             <h2 class="heading--title margin-bottom--20">Send a message</h2>
-            <x-form as="submit" name="contact" netlify action="/contact/?notice=success">
+            <x-form as="submit" name="contact" netlify action="/contact?notice=success">
               <x-form-input as="text" name="name" label="Name" required/>
               <x-form-input as="email" name="email" label="Email" required/>
-              <x-form-group as="select" name="subject" label="Subject">
+              <x-form-group as="select" name="subject" label="Subject" required>
                 <x-form-group-option name="art" label="Art inquiry"/>
                 <x-form-group-option name="business" label="Business inquiry"/>
                 <x-form-group-option name="hi" label="Saying hi"/>

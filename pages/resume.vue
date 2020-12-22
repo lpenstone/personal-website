@@ -2,6 +2,7 @@
   <div>
     <x-section as="hero" size="lg" top>
       <x-content class="text-align--center">
+        <x-icon as="secondary" icon="code" class="margin--center margin-bottom--30"/>
         <h1>Laura Penstone</h1>
         <h2 class="heading--title margin-bottom--30">Frontend Developer</h2>
         <p>3+ years of industry experience writing scalable, tested, component-based code.</p>
@@ -62,23 +63,23 @@
               <h3 class="heading--accent margin-bottom--20">Skills</h3>
               <div class="margin-top--20">
                 <h4 class="h6">Tools</h4>
-                <x-tag as="#AFAFAF" class="margin-top--10">HTML</x-tag>
-                <x-tag as="#AFAFAF" class="margin-top--10">CSS/Stylus</x-tag>
-                <x-tag as="#AFAFAF" class="margin-top--10">Javascript</x-tag>
-                <x-tag as="#AFAFAF" class="margin-top--10">Vue.js</x-tag>
-                <x-tag as="#AFAFAF" class="margin-top--10">Nuxt.js</x-tag>
-                <x-tag as="#AFAFAF" class="margin-top--10">Web sockets</x-tag>
-                <x-tag as="#AFAFAF" class="margin-top--10">Cypress</x-tag>
-                <x-tag as="#AFAFAF" class="margin-top--10">Headless CMS</x-tag>
-                <x-tag as="#AFAFAF" class="margin-top--10">Webpack</x-tag>
+                <x-tag as="#888888" class="margin-top--10">HTML</x-tag>
+                <x-tag as="#888888" class="margin-top--10">CSS/Stylus</x-tag>
+                <x-tag as="#888888" class="margin-top--10">Javascript</x-tag>
+                <x-tag as="#888888" class="margin-top--10">Vue.js</x-tag>
+                <x-tag as="#888888" class="margin-top--10">Nuxt.js</x-tag>
+                <x-tag as="#888888" class="margin-top--10">Web sockets</x-tag>
+                <x-tag as="#888888" class="margin-top--10">Cypress</x-tag>
+                <x-tag as="#888888" class="margin-top--10">Headless CMS</x-tag>
+                <x-tag as="#888888" class="margin-top--10">Webpack</x-tag>
               </div>
               <div class="margin-top--20">
                 <h4 class="h6">Workflow</h4>
-                <x-tag as="#AFAFAF" class="margin-top--10">Git</x-tag>
-                <x-tag as="#AFAFAF" class="margin-top--10">Netlify</x-tag>
-                <x-tag as="#AFAFAF" class="margin-top--10">Figma</x-tag>
-                <x-tag as="#AFAFAF" class="margin-top--10">Agile</x-tag>
-                <x-tag as="#AFAFAF" class="margin-top--10">Design systems</x-tag>
+                <x-tag as="#888888" class="margin-top--10">Git</x-tag>
+                <x-tag as="#888888" class="margin-top--10">Netlify</x-tag>
+                <x-tag as="#888888" class="margin-top--10">Figma</x-tag>
+                <x-tag as="#888888" class="margin-top--10">Agile</x-tag>
+                <x-tag as="#888888" class="margin-top--10">Design systems</x-tag>
               </div>
             </div>
           </div>
