@@ -10,9 +10,11 @@
             <p>Currently working in Toronto, Canada 🇨🇦 with my <x-link href="https://en.wikipedia.org/wiki/Potcake_dog" target="_blank">potcake</x-link> dog Kipper.</p>
             <x-see-more label="..." as="plain" class="margin-top--20">
               <strong>More?!</strong>
-              <p class="margin-top--10">I am passionate about teaching others and making the world of web developement accessible to people of all backgrounds.</p>
-              <p>I value and foster a diverse and inclusive workplace.</p>
-              <p>Big believer in being a <x-link href="https://signalvnoise.com/posts/1430-hire-managers-of-one" target="_blank">Manager of One</x-link>.</p>
+              <ul class="margin-top--10">
+                <li>I am passionate about teaching others and making the world of web developement accessible to people of all backgrounds.</li>
+                <li>I value and foster a diverse and inclusive workplace.</li>
+                <li>Big believer in being a <x-link href="https://signalvnoise.com/posts/1430-hire-managers-of-one" target="_blank">Manager of One</x-link>.</li>
+              </ul>
               <x-combo as="circle" size="sm" class="margin-top--20 margin-bottom--10">
                 <x-combo-img landscape>
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Potcakedog.jpg/1920px-Potcakedog.jpg" alt="">
@@ -157,7 +159,7 @@ export default {
 <style lang="stylus" scoped>
 
 #wave
-  background-image: url('~@/assets/images/index/wave.svg')
+  background-image: url('~@/assets/images/svg/wave-top.svg')
   background-repeat: no-repeat
   background-size: contain
   background-position: 0px -3px
@@ -168,7 +170,7 @@ export default {
 
 .mode--dark
   #wave
-    background-image: url('~@/assets/images/index/wave-dm.svg')
+    background-image: url('~@/assets/images/svg/wave-top-dm.svg')
 
 >>>#hero
   padding-top: 0

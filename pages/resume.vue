@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-section as="hero" size="lg" top>
+    <x-section class="bg-wave-bottom" as="hero" size="lg" top>
       <x-content class="text-align--center">
         <x-icon as="secondary" icon="code" class="margin--center margin-bottom--30"/>
         <h1>Laura Penstone</h1>
@@ -108,3 +108,4 @@ export default {
   }
 }
 </script>
+

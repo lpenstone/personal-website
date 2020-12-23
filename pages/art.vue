@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-section as="hero" size="lg" top>
+    <x-section class="bg-wave-bottom" as="hero" size="lg" top>
       <x-content class="text-align--center">
         <x-group as="center" size="sm">
           <x-icon as="secondary" icon="stamp" class="margin--center margin-bottom--30"/>
