@@ -2,31 +2,37 @@
   <div>
     <x-section as="hero" id="hero">
       <x-content>
-        <x-group class="margin-top--40">
-          <div>
-            <h1>Welcome 👋</h1>
-            <p>I'm Laura.</p>
-            <p>A frontend developer with a wide range of artistic hobbies and interests.</p>
-            <p>Currently working in Toronto, Canada 🇨🇦 with my <x-link href="https://en.wikipedia.org/wiki/Potcake_dog" target="_blank">potcake</x-link> dog Kipper.</p>
-            <x-see-more label="..." as="plain" class="margin-top--20">
-              <strong>More?!</strong>
-              <ul class="margin-top--10">
-                <li>I am passionate about teaching others and making the world of web developement accessible to people of all backgrounds.</li>
-                <li>I value and foster a diverse and inclusive workplace.</li>
-                <li>Big believer in being a <x-link href="https://signalvnoise.com/posts/1430-hire-managers-of-one" target="_blank">Manager of One</x-link>.</li>
-              </ul>
-              <x-combo as="circle" size="sm" class="margin-top--20 margin-bottom--10">
-                <x-combo-img landscape>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Potcakedog.jpg/1920px-Potcakedog.jpg" alt="">
-                </x-combo-img>
-                <x-combo-text>
-                  <p>Here's a bonus photo of Kipper!</p>
-                  <p>He was adopted in 2017 as a street dog from Saint Vincent and the Grenadines.</p>
-                </x-combo-text>
-              </x-combo>
-            </x-see-more>
+        <div class="hero__content">
+          <x-group class="margin-top--40">
+            <div class="hero__copy">
+              <h1>Welcome 👋</h1>
+              <p>I'm Laura.</p>
+              <p>A frontend developer with a wide range of artistic hobbies and interests.</p>
+              <p>Currently working in Toronto, Canada 🇨🇦 with my <x-link href="https://en.wikipedia.org/wiki/Potcake_dog" target="_blank">potcake</x-link> dog Kipper.</p>
+              <x-see-more label="..." as="plain" class="margin-top--20">
+                <strong>More?!</strong>
+                <ul class="margin-top--10">
+                  <li>I am passionate about teaching others and making the world of web developement accessible to people of all backgrounds.</li>
+                  <li>I value and foster a diverse and inclusive workplace.</li>
+                  <li>Big believer in being a <x-link href="https://signalvnoise.com/posts/1430-hire-managers-of-one" target="_blank">Manager of One</x-link>.</li>
+                </ul>
+                <x-combo as="circle" size="sm" class="margin-top--20 margin-bottom--10">
+                  <x-combo-img landscape>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Potcakedog.jpg/1920px-Potcakedog.jpg" alt="">
+                  </x-combo-img>
+                  <x-combo-text>
+                    <p>Here's a bonus photo of Kipper!</p>
+                    <p>He was adopted in 2017 as a street dog from Saint Vincent and the Grenadines.</p>
+                  </x-combo-text>
+                </x-combo>
+              </x-see-more>
+            </div>
+          </x-group>
+          <div class="hero__doodle">
+            <img class="hero__doodle--light" src="~@/assets/images/index/hero.png" alt="">
+            <img class="hero__doodle--dark" src="~@/assets/images/index/hero-dm.png" alt="">
           </div>
-        </x-group>
+        </div>
       </x-content>
     </x-section>
     <x-section id="hats" size="lg">
@@ -132,7 +138,7 @@
         </x-group>
       </x-content>
     </x-section>
-    <x-section class="bg-wave-top" as="secondary-light">
+    <x-section class="section--wave-top" as="secondary-light">
       <x-icon as="secondary" icon="code" class="margin--center margin-bottom--20"/>
       <h2 class="heading--accent margin-bottom--60 text-align--center">Recent Projects</h2>
       <x-content>
@@ -166,7 +172,6 @@ export default {
 
   @media(max-width: 991px)
     padding-top: 120px
-    padding-bottom: 60px
     height: auto
     max-height: 100%
 
@@ -175,15 +180,42 @@ export default {
 
   .container
     height: 100%
-    background-image: url('~@/assets/images/index/hero.png')
-    background-size: 700px
-    background-repeat: no-repeat
-    background-position: bottom right
-    display: flex
-    align-items: center
 
+  .hero__content
+    display: flex
+    flex-direction: column
+    height: 100%
+    justify-content: center
+
+  .hero__copy
+    position: relative
+    z-index: 1
+
+  .hero__doodle
+    position: absolute
+    max-width: 700px
+    bottom: 0
+    right: 0
+    order: 2
+    
     @media(max-width: 991px)
-      background-image: none
+      position: relative
+      display: block
+
+  .hero__doodle--light
+    display: block
+
+  .hero__doodle--dark
+    display: none
+
+
+.mode--dark
+  #hero
+    .hero__doodle--light
+      display: none
+
+    .hero__doodle--dark
+      display: block
 
 .mode--dark
   #hero

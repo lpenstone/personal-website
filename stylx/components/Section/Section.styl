@@ -102,4 +102,64 @@
   max-width: 1200px
   margin: 0 auto
 
+/* ----- WAVE ----- */
+
+.section--wave-bottom
+  background-image: url('./svg/wave-bottom.svg')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: left 0px bottom -3px
+  padding-bottom: 140px !important
+
+  @media(max-width: 991px)
+    padding-bottom: 90px !important
+
+.section--wave-top
+  background-image: url('./svg/wave-top.svg')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: 0px -3px
+  padding-top: 120px !important
+
+  @media(max-width: 991px)
+    padding-top: 90px !important
+
+.mode--dark
+  .section--wave-bottom
+    background-image: url('./svg/wave-bottom-dm.svg')
+
+  .section--wave-top
+    background-image: url('./svg/wave-top-dm.svg')
+
+/* ----- SWOOSH ----- */
+
+.section--swoosh-bottom
+  background-image: url('./svg/swoosh-bottom.svg')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: left 0px bottom -3px
+  padding-bottom: 140px !important
+
+  @media(max-width: 991px)
+    padding-bottom: 90px !important
+
+.section--swoosh-top
+  background-image: url('./svg/swoosh-top.svg')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: 0px -3px
+  padding-top: 120px !important
+
+
+
+  @media(max-width: 991px)
+    padding-top: 90px !important
+
+.mode--dark
+  .section--swoosh-bottom
+    background-image: url('./svg/swoosh-bottom-dm.svg')
+
+  .section--swoosh-top
+    background-image: url('./svg/swoosh-top-dm.svg')
+
 dump_media_cache()
