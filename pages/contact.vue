@@ -10,15 +10,15 @@
     <x-section>
       <x-content>
         <x-group as="center" size="md">
-          <div v-if="success" class="text-align-center">
+          <div v-if="success" class="text-align--center">
             <div class="h2">👏</div>
             <h2 class="h3">Thanks!</h2>
             <p>I look forward to reading your message, and I'll reply as soon as I can.</p>
-            <x-button @clicked="reset()" class="margin-top--20">New message</x-button>
+            <x-button @click="reset()" class="margin-top--20">New message</x-button>
           </div>
           <x-card v-else as="shadow" size="lg">
             <h2 class="heading--title margin-bottom--20">Send a message</h2>
-            <x-form as="submit" name="contact" method="POST" netlify action="/contact/?notice=success">
+            <x-form as="submit" name="contact-2020" method="POST" netlify action="/contact/?notice=success">
               <x-form-input as="text" name="name" label="Name" required/>
               <x-form-input as="email" name="email" label="Email" required/>
               <x-form-group as="select" name="subject" label="Subject" required>
