@@ -2,17 +2,17 @@
   <div class="row">
     <div class="col-sm-12 col-md-6">
       <x-group size="sm" class="margin--center">
-        <x-card as="shadow">
+        <x-card as="shadow" class="margin-bottom--20">
           <h3>Stylx</h3>
           <div class="margin-top--30 margin-bottom--20">
             <p>A pre-styled component library & design system to help developers create websites (like this one) fast.</p>
             <p>Customizations are made in the stylx.config file to suit your brand. The components do the rest.</p>
             <p>Comes with <strong>dark mode, responsive styles, keyboard commands, and accessibility features</strong> out-of-the-box.</p>
             <div class="margin-top--20">
-              <x-tag as="#888888" class="margin-top-10">Nuxt.js</x-tag>
-              <x-tag as="#888888" class="margin-top-10">Design systems</x-tag>
-              <x-tag as="#888888" class="margin-top-10">BEM</x-tag>
-              <x-tag as="#888888" class="margin-top-10">Documentation</x-tag>
+              <x-tag as="#888888" class="margin-top--10">Nuxt.js</x-tag>
+              <x-tag as="#888888" class="margin-top--10">Design systems</x-tag>
+              <x-tag as="#888888" class="margin-top--10">BEM</x-tag>
+              <x-tag as="#888888" class="margin-top--10">Documentation</x-tag>
             </div>
           </div>
           <x-link href="https://www.stylx.dev" as="link-alt" icon="external-link-alt" target="_blank">Visit Stylx website</x-link>
@@ -21,17 +21,17 @@
     </div>
     <div class="col-sm-12 col-md-6">
       <x-group size="sm" class="margin--center">
-        <x-card as="shadow">
+        <x-card as="shadow" class="margin-bottom--20">
           <h3>ditto</h3>
           <div class="margin-top--30 margin-bottom--20">
             <p>Video conferencing UI wrapper that allows guests to break off into smaller video call rooms, while maintaning context of the whole virtual event.</p>
             <p>Users are able to customize their events with different rooms and features.</p>
             <p>ditto is currently not an open source project.</p>
             <div class="margin-top--20">
-              <x-tag as="#888888" class="margin-top-10">UI Design</x-tag>
-              <x-tag as="#888888" class="margin-top-10">Vue.js</x-tag>
-              <x-tag as="#888888" class="margin-top-10">Websockets</x-tag>
-              <x-tag as="#888888" class="margin-top-10">JAM Stack</x-tag>
+              <x-tag as="#888888" class="margin-top--10">UI Design</x-tag>
+              <x-tag as="#888888" class="margin-top--10">Vue.js</x-tag>
+              <x-tag as="#888888" class="margin-top--10">Websockets</x-tag>
+              <x-tag as="#888888" class="margin-top--10">JAM Stack</x-tag>
             </div>
           </div>
           <x-modal size="lg" buttonAs="link-alt" name="ditto-modal" label="View app screenshots">

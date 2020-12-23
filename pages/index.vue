@@ -12,7 +12,8 @@
               <strong>More?!</strong>
               <p class="margin-top--10">I am passionate about teaching others and making the world of web developement accessible to people of all backgrounds.</p>
               <p>I value and foster a diverse and inclusive workplace.</p>
-              <x-combo as="circle" size="sm" class="margin-top--10 margin-bottom--10">
+              <p>Big believer in being a <x-link href="https://signalvnoise.com/posts/1430-hire-managers-of-one" target="_blank">Manager of One</x-link>.</p>
+              <x-combo as="circle" size="sm" class="margin-top--20 margin-bottom--10">
                 <x-combo-img landscape>
                   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Potcakedog.jpg/1920px-Potcakedog.jpg" alt="">
                 </x-combo-img>
@@ -129,7 +130,7 @@
         </x-group>
       </x-content>
     </x-section>
-    <x-section>
+    <x-section id="wave" as="secondary-light">
       <x-icon as="secondary" icon="code" class="margin--center margin-bottom--20"/>
       <h2 class="heading--accent margin-bottom--60 text-align--center">Recent Projects</h2>
       <x-content>
@@ -155,6 +156,20 @@ export default {
 
 <style lang="stylus" scoped>
 
+#wave
+  background-image: url('~@/assets/images/index/wave.svg')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: 0px -3px
+  padding-top: 120px
+
+  @media(max-width: 991px)
+    padding-top: 90px
+
+.mode--dark
+  #wave
+    background-image: url('~@/assets/images/index/wave-dm.svg')
+
 >>>#hero
   padding-top: 0
   padding-bottom: 0
@@ -165,7 +180,7 @@ export default {
     padding-top: 120px
     padding-bottom: 60px
     height: auto
-    max-height: auto
+    max-height: 100%
 
   .section__inner
     height: 100%
