@@ -132,7 +132,7 @@
         </x-group>
       </x-content>
     </x-section>
-    <x-section id="wave" as="secondary-light">
+    <x-section class="bg-wave-top" as="secondary-light">
       <x-icon as="secondary" icon="code" class="margin--center margin-bottom--20"/>
       <h2 class="heading--accent margin-bottom--60 text-align--center">Recent Projects</h2>
       <x-content>
@@ -157,20 +157,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
-#wave
-  background-image: url('~@/assets/images/svg/wave-top.svg')
-  background-repeat: no-repeat
-  background-size: contain
-  background-position: 0px -3px
-  padding-top: 120px
-
-  @media(max-width: 991px)
-    padding-top: 90px
-
-.mode--dark
-  #wave
-    background-image: url('~@/assets/images/svg/wave-top-dm.svg')
 
 >>>#hero
   padding-top: 0

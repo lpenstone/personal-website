@@ -4,7 +4,7 @@
       <x-content class="text-align--center">
         <x-icon as="secondary" icon="comments" class="margin--center margin-bottom--30"/>
         <h1>Let's chat</h1>
-        <p>Communication welcome via <x-link href="https://www.linkedin.com/in/laura-penstone-073431111/" target="_blank">LinkedIn</x-link> or message form below</p>
+        <p>Communication welcome via <x-link href="https://www.linkedin.com/in/laura-penstone-073431111/" target="_blank">LinkedIn</x-link> or message form below.</p>
       </x-content>
     </x-section>
     <x-section>
@@ -18,7 +18,7 @@
           </div>
           <x-card v-else as="shadow" size="lg">
             <h2 class="heading--title margin-bottom--20">Send a message</h2>
-            <x-form as="submit" name="contact-2020" method="POST" netlify action="/contact/?notice=success">
+            <x-form as="submit" name="contact" method="POST" netlify action="/contact/?notice=success">
               <x-form-input as="text" name="name" label="Name" required/>
               <x-form-input as="email" name="email" label="Email" required/>
               <x-form-group as="select" name="subject" label="Subject" required>

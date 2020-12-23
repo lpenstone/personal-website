@@ -7,7 +7,7 @@
         <h2 class="heading--title margin-bottom--30">Frontend Developer</h2>
         <p>3+ years of industry experience writing scalable, tested, component-based code.</p>
         <P>Developing beautiful UI's that are accessibile to all audiences.</p>
-        <x-link as="standard" class="margin-top--20" href="https://linkedin.com">LinkedIn</x-link>
+        <x-link as="standard" href="https://www.linkedin.com/in/laura-penstone-073431111/" target="_blank" class="margin-top--20">LinkedIn</x-link>
       </x-content>
     </x-section>
     <x-section>

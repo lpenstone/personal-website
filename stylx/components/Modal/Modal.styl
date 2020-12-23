@@ -65,22 +65,32 @@
   position: absolute
   top: 8px
   right: 8px
+  z-index: 2
+
+  >>>.btn
+    background-color: #e5e5e5
+
+.mode--dark
+  .modal__close
+    >>>.btn
+      background-color: #0e1317
+
 
 .modal__content
   margin: 0px auto 0px
   padding: 30px 50px 35px
+  max-height: 90vh
+  overflow: auto
 
   @media(max-width: 676px)
     padding: 30px 7%
 
   img
-    width: auto 
-    max-width: 100%
-    max-height: 75vh
+    width: 100%
+    // max-height: 75vh
 
   >>>.item img
     width: auto 
-    max-width: 100%
-    max-height: 75vh
+    // max-height: 75vh
 
 dump_media_cache()
