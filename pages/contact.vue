@@ -18,7 +18,7 @@
           </div>
           <x-card v-else as="shadow" size="lg">
             <h2 class="heading--title margin-bottom--20">Send a message</h2>
-            <x-form as="submit" name="contact" method="POST" netlify action="/contact/?notice=success">
+            <x-form as="submit" name="contact2" method="POST" netlify action="/contact/?notice=success">
               <x-form-input as="text" name="name" label="Name" required/>
               <x-form-input as="email" name="email" label="Email" required/>
               <x-form-group as="select" name="subject" label="Subject" required>
