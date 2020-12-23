@@ -217,14 +217,6 @@ export default {
     .hero__doodle--dark
       display: block
 
-.mode--dark
-  #hero
-    .container
-      background-image: url('~@/assets/images/index/hero-dm.png')
-
-      @media(max-width: 991px)
-        background-image: none
-
 #hats
   padding-bottom: 20px
 
