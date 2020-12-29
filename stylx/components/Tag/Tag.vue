@@ -1,5 +1,6 @@
 <template>
   <button v-if="isLabel"
+    @click="toggleLabel()"
     ref="stylxTag"
     class="tag"
     :class="[classType ? 'tag--' + classType : '', {'tag--pointer': isLabel}, {'tag--show-label': showLabel}]"
@@ -59,6 +60,11 @@ export default {
   mounted: function () {
     if (!this.$refs.stylxTag) return
     this.isLabelEl = this.$refs.stylxTag.getElementsByClassName('tag-label').length > 0
+  },
+  methods: {
+    toggleLabel: function () {
+      if (this.isLabel) this.showLabel = !this.showLabel
+    }
   }
 }
 </script>

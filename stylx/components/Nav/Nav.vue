@@ -32,10 +32,7 @@
             </div>
           </div>
           <div class="nav__items nav__items--right">
-            <div class="nav__item nav__item--icons">
-              <slot name="icons">
-                <x-social></x-social>
-              </slot>
+            <div class="nav__item">
               <div v-if="allowModeToggle" class="mode-toggle__wrap">
                 <x-mode-toggle></x-mode-toggle>
               </div>
@@ -44,7 +41,6 @@
         </div>
       </div>
     </nav>
-    <!-- <div class="nav__dummy-bar"></div> -->
   </div>
 </template>
 

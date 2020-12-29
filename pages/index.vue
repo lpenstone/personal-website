@@ -138,11 +138,40 @@
         </x-group>
       </x-content>
     </x-section>
-    <x-section class="section--wave-top" as="secondary-light">
+    <x-section wave="top" as="secondary-light">
       <x-icon as="secondary" icon="code" class="margin--center margin-bottom--20"/>
       <h2 class="heading--accent margin-bottom--60 text-align--center">Recent Projects</h2>
       <x-content>
         <recent-projects/>
+      </x-content>
+    </x-section>
+    <x-section id="swap" ref="resizeContainer">
+      <div class="swap__wrap--swim">
+        <div class="swap__img-wrap">
+          <img class="swap__img--spotlight2" src="~@/assets/images/index/spotlight.svg" alt="">
+          <img class="swap__img--swim" src="~@/assets/images/index/swim.png" alt="">
+        </div>
+      </div>
+      <div class="resize__wrap" :style="`width: ${demoWidth}px;`">
+        <button ref="resize" id="resize"
+          @mousedown="start"
+          @mouseup="stop">
+          <x-icon icon="arrows-alt-h"/>
+        </button>
+        <div class="swap__wrap--run">
+          <div class="swap__img-wrap">
+            <img class="swap__img--run" src="~@/assets/images/index/run.png" alt="">
+            <img class="swap__img--spotlight1" src="~@/assets/images/index/spotlight.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </x-section>
+    <x-section size="lg">
+      <x-content>
+        <x-group as="center" size="sm" class="text-align--center">
+          <h2 class="h3">Shall we chat?</h2>
+          <x-link :to="{name: 'contact'}" as="standard" size="lg" class="margin-top--20">Get in touch</x-link>
+        </x-group>
       </x-content>
     </x-section>
   </div>
@@ -157,12 +186,192 @@ export default {
     'recent-projects': recentProjects
   },
   data () {
-    return {}
+    return {
+      demoWidth: 1000,
+      maxWidth: 1000,
+      minWidth: 50,
+      timer: null,
+      x1: 0,
+      x2: 0
+    }
+  },
+  mounted: function () {
+    this.getMaxWidth()
+    window.addEventListener('resize', this.getMaxWidth)
+    this.$refs.resize.addEventListener('touchstart', this.mobileStart, true)
+  },
+  methods: {
+    getMaxWidth: function () {
+      let elWidth = this.$refs.resizeContainer.$el.clientWidth
+      this.maxWidth = 0.95 * elWidth
+      this.demoWidth = 0.9 * elWidth
+      console.log(this.maxWidth)
+      if (this.demoWidth > this.maxWidth) this.demoWidth = this.maxWidth
+    },
+    start: function (e) {
+      this.x1 = e.screenX
+      this.x2 = e.screenX
+      window.addEventListener('mouseup', this.stop)
+      window.addEventListener('mousemove', this.resize)
+    },
+    resize: function (e) {
+      this.x2 = e.screenX
+      let diff = this.x2 - this.x1
+      this.demoWidth += diff
+
+      if (this.demoWidth > this.maxWidth) this.demoWidth = this.maxWidth
+      if (this.demoWidth < this.minWidth) this.demoWidth = this.minWidth
+      this.x1 = this.x2
+    },
+    mobileStart: function (e) {
+      this.x1 = parseInt(e.touches[0].screenX)
+      this.x2 = parseInt(e.touches[0].screenX)
+
+      this.$refs.resize.addEventListener('touchmove', this.mobileResize, true)
+      this.$refs.resize.addEventListener('touchend', this.stop, true)
+    },
+    mobileResize: function (e) {
+      this.x2 = parseInt(e.touches[0].screenX)
+      let diff = this.x2 - this.x1
+      this.demoWidth += diff
+
+      if (this.demoWidth > this.maxWidth) this.demoWidth = this.maxWidth
+      if (this.demoWidth < this.minWidth) this.demoWidth = this.minWidth
+      this.x1 = this.x2
+    },
+    stop: function (e) {
+      window.removeEventListener('mousemove', this.resize)
+      window.removeEventListener('mouseup', this.stop)
+
+      this.$refs.resize.removeEventListener('touchmove', this.resize, true)
+      this.$refs.resize.removeEventListener('touchend', this.stop, true)
+    }
+  },
+  destroyed: function () {
+    window.removeEventListener('resize', this.getMaxWidth)
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+@import '~@/assets/styles/variables'
+
+@keyframes flickerAnimation {
+  0%   { opacity:1 }
+  1%  { opacity:1 }
+  2%  { opacity:0 }
+  5%  { opacity:1 }
+  6%  { opacity:0 }
+  28%  { opacity:1 }
+  100% { opacity:1 }
+}
+
+#resize
+  position: absolute
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  background-color: $brand
+  border: none
+  top: 40%
+  right: -25px
+  z-index: 5
+  outline: 0
+  color: white !important
+  cursor: ew-resize
+
+#swap
+  background-color: lighten($brand-xxlight, 60%)
+  padding: 0
+  position: relative
+
+  .resize__wrap
+    height: 100%
+    display: inline-block
+    position: absolute
+    top: 0
+    left: 0
+    border-right: 3px solid $brand
+
+  .swap__wrap--swim, .swap__wrap--run
+    padding-right: 20px
+    padding-left: 20px
+    overflow: hidden
+
+  .swap__wrap--swim
+    width: 100%
+    padding-top: 0px
+    padding-bottom: 30px
+
+  .swap__wrap--run
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    padding-top: 60px
+    background-color: lighten($secondary-xxlight, 40%)
+    padding-bottom: 50px
+    z-index: 4
+
+    @media(max-width: 767px)
+      padding-top: 20px
+
+  .swap__img--spotlight1
+    width: 950px
+    position: absolute
+    top: -265px
+    left: 6%
+    transform: rotate(-21deg)
+    display: none
+    animation: flickerAnimation 6s infinite
+
+  .swap__img--spotlight2
+    width: 950px
+    position: absolute
+    bottom: -155px
+    left: 13%
+    transform: rotate(210deg)
+    display: none
+    animation: flickerAnimation 3s infinite
+
+  .swap__img-wrap
+    width: 1200px
+    position: relative
+
+    @media(max-width: 767px)
+      width: 500px
+
+  .swap__img--run, .swap__img--swim
+    position: relative
+    display: block
+    margin: auto
+    z-index: 3
+
+    @media(max-width: 1000px)
+      margin: 0
+
+  .swap__img--run
+    width: 600px
+
+    @media(max-width: 767px)
+      width: 320px
+
+  .swap__img--swim
+    width: 670px
+
+    @media(max-width: 767px)
+      width: 320px
+
+.mode--dark
+  #swap
+    background-color: darken($brand-xxdark, 60%)
+
+    .swap__wrap--run
+      background-color: darken($secondary-xxdark, 40%)
+
+    .swap__img--spotlight1, .swap__img--spotlight2
+      display: block
+
 
 >>>#hero
   padding-top: 0

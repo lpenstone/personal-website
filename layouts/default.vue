@@ -3,6 +3,19 @@
     <div class="view-content">
       <x-nav></x-nav>
       <Nuxt />
+      <x-section as="alt" size="sm" id="footer">
+        <x-content>
+          <div class="footer__wrap">
+            <div class="footer--left">
+              <strong class="font-size--sm">©2020 Laura Penstone</strong>
+              <p class="font-size--sm">Built with <x-link href="https://www.styl.dev" target="_blank">Stylx</x-link></p>
+            </div>
+            <div class="footer--right">
+              <x-social></x-social>
+            </div>
+          </div>
+        </x-content>
+      </x-section>
     </div>
   </div>
 </template>
@@ -31,5 +44,10 @@ export default {
 .view-wrap
   .view-content
     min-height: 90vh
+
+.footer__wrap
+  display: flex
+  justify-content: space-between
+  align-items: center
 
 </style>
