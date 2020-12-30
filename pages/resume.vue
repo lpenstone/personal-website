@@ -80,6 +80,7 @@
                 <x-tag as="#888888" class="margin-top--10">Figma</x-tag>
                 <x-tag as="#888888" class="margin-top--10">Agile</x-tag>
                 <x-tag as="#888888" class="margin-top--10">Design systems</x-tag>
+                <x-tag as="#888888" class="margin-top--10">UI/UX Design</x-tag>
               </div>
             </div>
           </div>

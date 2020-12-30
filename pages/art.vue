@@ -33,7 +33,7 @@
         </div>
         <div class="text-align--center margin-top--50">
           <h2 class="h4">Printmaking</h2>
-          <h3 class="heading--accent">Linocut, screenpringting, sewing</h3>
+          <h3 class="heading--accent">Linocut, screenprinting, sewing</h3>
           <x-grid as="gallery" cols="4" name="prints">
             <x-grid-item>
               <img src="~@/assets/images/art/print1.png" alt="">

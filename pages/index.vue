@@ -18,7 +18,7 @@
                 </ul>
                 <x-combo as="circle" size="sm" class="margin-top--20 margin-bottom--10">
                   <x-combo-img landscape>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Potcakedog.jpg/1920px-Potcakedog.jpg" alt="">
+                    <img src="~@/assets/images/index/kipper.png" alt="Russet coloured potcake dog">
                   </x-combo-img>
                   <x-combo-text>
                     <p>Here's a bonus photo of Kipper!</p>
@@ -169,8 +169,8 @@
     <x-section size="lg">
       <x-content>
         <x-group as="center" size="sm" class="text-align--center">
-          <h2 class="h3">Shall we chat?</h2>
-          <x-link :to="{name: 'contact'}" as="standard" size="lg" class="margin-top--20">Get in touch</x-link>
+          <h2 class="h3">Let's connect?</h2>
+          <x-link href="https://www.linkedin.com/in/laura-penstone-073431111/" as="standard" size="lg" class="margin-top--20">View LinkedIn</x-link>
         </x-group>
       </x-content>
     </x-section>

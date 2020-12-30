@@ -8,7 +8,7 @@
           <div class="footer__wrap">
             <div class="footer--left">
               <span class="font-size--sm">©2020 Laura Penstone</span>
-              <p class="font-size--sm">Built with <x-link href="https://www.styl.dev" target="_blank">Stylx</x-link></p>
+              <!-- <p class="font-size--sm">Built with <x-link href="https://www.stylx.dev" target="_blank">Stylx</x-link></p> -->
             </div>
             <div class="footer--right">
               <x-social></x-social>
@@ -49,5 +49,9 @@ export default {
   display: flex
   justify-content: space-between
   align-items: center
+
+  @media(max-width: 767px)
+    text-align: center
+    flex-direction: column
 
 </style>
