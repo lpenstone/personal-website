@@ -1,7 +1,7 @@
 <template>
   <form :ref="name" class="form" :class="{'form--errors': showErrors}" method="POST" @submit.prevent="submit()">
     <slot></slot>
-    <x-button v-if="isSubmit" type="submit" size="lg" class="margin--center-block">Submit</x-button>
+    <!-- <x-button v-if="isSubmit" type="submit" size="lg" class="margin--center-block">Submit</x-button> -->
   </form>
 </template>
 
