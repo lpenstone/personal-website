@@ -146,9 +146,9 @@
       </x-content>
     </x-section>
     <x-section id="swap" ref="resizeContainer">
-      <div class="swap__wrap--swim">
+        <img class="swap__img--spotlight2" :class="{'on': spotlight2}" src="~@/assets/images/index/spotlight.svg" alt="">
         <div class="swap__img-wrap">
-          <img class="swap__img--spotlight2" src="~@/assets/images/index/spotlight.svg" alt="">
+          <div class="swap__wrap--swim">
           <img class="swap__img--swim" src="~@/assets/images/index/swim.png" alt="">
         </div>
       </div>
@@ -160,8 +160,8 @@
         </button>
         <div class="swap__wrap--run">
           <div class="swap__img-wrap">
+            <img class="swap__img--spotlight1" :class="{'on': spotlight1}" src="~@/assets/images/index/spotlight.svg" alt="">
             <img class="swap__img--run" src="~@/assets/images/index/run.png" alt="">
-            <img class="swap__img--spotlight1" src="~@/assets/images/index/spotlight.svg" alt="">
           </div>
         </div>
       </div>
@@ -190,9 +190,12 @@ export default {
       demoWidth: 1000,
       maxWidth: 1000,
       minWidth: 50,
+      swapWidth: 400,
       timer: null,
       x1: 0,
-      x2: 0
+      x2: 0,
+      spotlight1: true,
+      spotlight2: false
     }
   },
   mounted: function () {
@@ -204,8 +207,9 @@ export default {
     getMaxWidth: function () {
       let elWidth = this.$refs.resizeContainer.$el.clientWidth
       this.maxWidth = 0.95 * elWidth
-      this.demoWidth = 0.9 * elWidth
-      console.log(this.maxWidth)
+      this.swapWidth = 0.4 * this.maxWidth
+      const reachedMax = (0.9 * elWidth) > 1100
+      this.demoWidth = reachedMax ? 1100 : (0.9 * elWidth)
       if (this.demoWidth > this.maxWidth) this.demoWidth = this.maxWidth
     },
     start: function (e) {
@@ -222,6 +226,7 @@ export default {
       if (this.demoWidth > this.maxWidth) this.demoWidth = this.maxWidth
       if (this.demoWidth < this.minWidth) this.demoWidth = this.minWidth
       this.x1 = this.x2
+      this.spotlightCheck()
     },
     mobileStart: function (e) {
       this.x1 = parseInt(e.touches[0].screenX)
@@ -238,6 +243,7 @@ export default {
       if (this.demoWidth > this.maxWidth) this.demoWidth = this.maxWidth
       if (this.demoWidth < this.minWidth) this.demoWidth = this.minWidth
       this.x1 = this.x2
+      this.spotlightCheck()
     },
     stop: function (e) {
       window.removeEventListener('mousemove', this.resize)
@@ -245,6 +251,16 @@ export default {
 
       this.$refs.resize.removeEventListener('touchmove', this.resize, true)
       this.$refs.resize.removeEventListener('touchend', this.stop, true)
+    },
+    spotlightCheck: function () {
+      if(this.spotlight1 && (this.demoWidth < this.swapWidth)) {
+        this.spotlight1 = false
+        this.spotlight2 = true
+      }
+      if(this.spotlight2 && (this.demoWidth > this.swapWidth)) {
+        this.spotlight1 = true
+        this.spotlight2 = false
+      }
     }
   },
   destroyed: function () {
@@ -294,6 +310,7 @@ export default {
     border-right: 3px solid $brand
 
   .swap__wrap--swim, .swap__wrap--run
+    position: relative
     padding-right: 20px
     padding-left: 20px
     overflow: hidden
@@ -320,22 +337,36 @@ export default {
     width: 950px
     position: absolute
     top: -265px
-    left: 6%
+    left: 80px
     transform: rotate(-21deg)
     display: none
     animation: flickerAnimation 6s infinite
 
+    @media(max-width: 900px)
+      left: -18%
+
+    @media(max-width: 767px)
+      top: -185px
+      left: -22%
+      width: 450px
+
   .swap__img--spotlight2
     width: 950px
     position: absolute
-    bottom: -155px
+    bottom: -185px
     left: 13%
     transform: rotate(210deg)
     display: none
     animation: flickerAnimation 3s infinite
 
+    @media(max-width: 900px)
+      left: -12%
+
+    @media(max-width: 767px)
+      width: 450px
+
   .swap__img-wrap
-    width: 1200px
+    width: 1250px
     position: relative
 
     @media(max-width: 767px)
@@ -347,7 +378,7 @@ export default {
     margin: auto
     z-index: 3
 
-    @media(max-width: 1000px)
+    @media(max-width: 900px)
       margin: 0
 
   .swap__img--run
@@ -370,7 +401,10 @@ export default {
       background-color: darken($secondary-xxdark, 40%)
 
     .swap__img--spotlight1, .swap__img--spotlight2
-      display: block
+      display: none
+
+      &.on
+        display: block
 
 
 >>>#hero
