@@ -8,6 +8,7 @@
               <h1>Welcome 👋</h1>
               <p>I'm Laura.</p>
               <p>A frontend developer with a wide range of artistic hobbies and interests.</p>
+              <p>Found at the intersection of design and development.</p>
               <p>Currently working in Toronto, Canada 🇨🇦 with my <x-link href="https://en.wikipedia.org/wiki/Potcake_dog" target="_blank">potcake</x-link> dog Kipper.</p>
               <x-see-more label="..." as="plain" class="margin-top--20">
                 <strong>More?!</strong>
@@ -38,6 +39,15 @@
     <x-section id="hats" size="lg">
       <x-content class="text-align-center">
         <x-group as="center">
+          <div class="venn__wrap">
+            <div class="venn__label venn__label--left">design</div>
+            <div class="venn__label venn__label--right">development</div>
+            <div class="venn__circle venn__circle--left"></div>
+            <div class="venn__circle venn__circle--right"></div>
+            <div class="venn__label venn__label--magic">
+              <img srcset="~@/assets/images/index/unicorn@2x.png 2x, ~@/assets/images/index/unicorn.png 1x" src="~@/assets/images/index/unicorn.png" alt="" class="venn__img">
+            </div>
+          </div>
           <x-carousel height="240" name="about-me">
             <x-carousel-item>
               <h2 class="margin-bottom--20">Frontend Developer</h2>
@@ -281,6 +291,93 @@ export default {
   28%  { opacity:1 }
   100% { opacity:1 }
 }
+
+@keyframes vennRightAnimation {
+  0%   { transform: translate(170px, 0); }
+  50%  { transform: translate(50px, 0); }
+  60%  { transform: translate(50px, 0); }
+  100%  { transform: translate(170px, 0); }
+}
+
+@keyframes vennLeftAnimation {
+  0%   { transform: translate(-170px, 0); }
+  50%  { transform: translate(-50px, 0); }
+  60%  { transform: translate(-50px, 0); }
+  100%  { transform: translate(-170px, 0); }
+}
+
+@keyframes vennMagicAnimation {
+  0%   { width: 0px }
+  13%  { 
+        width: 0px
+        transform: translate(-19px, 0)
+       }
+  34%  { 
+        width: 76px
+        transform: translate(0, 0)
+        }
+  63%  { 
+        width: 76px
+        transform: translate(0, 0)
+        }
+  76%  {
+        width: 0px
+        transform: translate(-19px, 0)
+        }
+  100%  { width: 0px }
+}
+
+.venn__wrap
+  display: flex
+  position: relative
+  height: 200px
+  justify-content: center
+  margin-bottom: 100px
+
+.venn__label
+  font-family: 'Sacramento', cursive
+  font-size: 38px
+
+.venn__label--left
+  padding-right: 60px
+
+  @media(max-width: 767px)
+    padding-right: 40px
+
+.venn__label--right
+  padding-left: 60px
+
+  @media(max-width: 767px)
+    padding-left: 40px
+
+.venn__label--magic
+  position: absolute
+  height: 200px
+  top: 60px
+  color: $secondary
+  width: 76px
+  animation: vennMagicAnimation 5s infinite
+  overflow: hidden
+
+.venn__img
+  width: 76px
+
+.venn__circle
+  position: absolute
+  display: block
+  height: 200px
+  width: 200px
+  border-radius: 50%
+
+.venn__circle--left
+  background-color: rgba(18, 32, 222, 0.2)
+  display: block
+  animation: vennLeftAnimation 5s infinite
+
+.venn__circle--right
+  background-color: rgba(222, 66, 18, 0.2)
+  display: block
+  animation: vennRightAnimation 5s infinite
 
 #resize
   position: absolute
