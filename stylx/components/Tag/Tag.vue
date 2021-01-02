@@ -1,6 +1,6 @@
 <template>
   <button v-if="isLabel"
-    @click="toggleLabel()"
+    @touch="toggleLabel()"
     ref="stylxTag"
     class="tag"
     :class="[classType ? 'tag--' + classType : '', {'tag--pointer': isLabel}, {'tag--show-label': showLabel}]"
