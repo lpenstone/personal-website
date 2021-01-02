@@ -439,7 +439,8 @@ export default {
     display: block
     animation: vennRightAnimation 5s infinite
 
-  .mode--dark
+.mode--dark
+  #venn
     .venn__img--lm
       display: none
 
