@@ -7,7 +7,7 @@
           <h1 class="margin-bottom--20">Art & Printmaking</h1>
           <p>I love making things with my hands.</p>
           <p>I frequently experiment with different mediums, with my current focus being on printmaking (linocut & screenprinting) and digital illustrations.</p>
-          <p class="margin-top--20"><em>Shop coming soon</em></p>
+          <x-link as="standard" class="margin-top--20" href="https://www.etsy.com/ca/shop/LPDesignsCanada" target="_blank">Visit Shop</x-link>
         </x-group>
       </x-content>
     </x-section>

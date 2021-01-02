@@ -1,7 +1,21 @@
 <template>
   <div class="view-wrap" :class="darkMode ? 'mode--dark' : ''">
     <div class="view-content">
-      <x-nav></x-nav>
+      <x-nav>
+        <template v-slot:links>
+          <ul>
+            <li>
+              <x-link as="link-alt" :to="{name: 'resume'}">Resume</x-link>
+            </li>
+            <li>
+              <x-link as="link-alt" :to="{name: 'art'}">Art</x-link>
+            </li>
+            <li>
+              <x-link as="link-alt" href="https://www.etsy.com/ca/shop/LPDesignsCanada" target="_blank">Shop</x-link>
+            </li>
+          </ul>
+        </template>
+      </x-nav>
       <Nuxt />
       <x-section as="alt" size="sm" id="footer">
         <x-content>

@@ -27,6 +27,7 @@
             <p>Video conferencing UI wrapper that allows guests to break off into smaller video call rooms, while maintaning context of the whole virtual event.</p>
             <p>Users are able to customize their events with different rooms and features.</p>
             <p>ditto is currently not an open source project.</p>
+            <p class="font-size--sm"><strong>Part of a 4 person team. Responsible for: UI/UX design, illustration, branding, and frontend development</strong></p>
             <div class="margin-top--20">
               <x-tag as="#888888" class="margin-top--10">UI Design</x-tag>
               <x-tag as="#888888" class="margin-top--10">Vue.js</x-tag>
