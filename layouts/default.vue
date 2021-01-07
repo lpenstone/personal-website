@@ -21,8 +21,7 @@
         <x-content>
           <div class="footer__wrap">
             <div class="footer--left">
-              <span class="font-size--sm">©2020 Laura Penstone</span>
-              <!-- <p class="font-size--sm">Built with <x-link href="https://www.stylx.dev" target="_blank">Stylx</x-link></p> -->
+              <span class="font-size--sm">©2021 Laura Penstone</span>
             </div>
             <div class="footer--right">
               <x-social></x-social>
