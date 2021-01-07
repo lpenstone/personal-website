@@ -6,7 +6,7 @@
         <h1>Laura Penstone</h1>
         <h2 class="heading--title margin-bottom--30">Frontend Developer</h2>
         <p>3+ years of industry experience writing scalable, tested, component-based code.</p>
-        <P>Developing beautiful UI's that are accessibile to all audiences.</p>
+        <P>Developing beautiful UI's that are accessible to all audiences.</p>
         <x-link as="standard" href="https://www.linkedin.com/in/laura-penstone-073431111/" target="_blank" class="margin-top--20">LinkedIn</x-link>
       </x-content>
     </x-section>
@@ -48,7 +48,7 @@
                 <li>Delivering weekly lectures to students new to web development. Topics include: Git & development workflow, HTML, CSS, Ruby, Sinatra, Active Record, relational databases, sessions, cookies, and deployment.</li>
                 <li>Fostering an inclusive and casual learning environment.</li>
                 <li>Providing live demos, encouraging student input and suggestions.</li>
-                <li>Putting together breakout activities for students to practice their learnings with free tools sush as Codepen and repl.it.</li>
+                <li>Putting together breakout activities for students to practice their learnings with free tools such as Codepen and repl.it.</li>
                 <li>Helping students understand error messages and debug their code.</li>
               </ul>
             </div>
