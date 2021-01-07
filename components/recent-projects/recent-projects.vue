@@ -24,7 +24,7 @@
         <x-card as="shadow" class="margin-bottom--20">
           <h3>ditto</h3>
           <div class="margin-top--30 margin-bottom--20">
-            <p>Video conferencing UI wrapper that allows guests to break off into smaller video call rooms, while maintaning context of the whole virtual event.</p>
+            <p>Video conferencing UI wrapper that allows guests to break off into smaller video call rooms, while maintaining context of the whole virtual event.</p>
             <p>Users are able to customize their events with different rooms and features.</p>
             <p>ditto is currently not an open source project.</p>
             <p class="font-size--sm"><strong>Part of a 4 person team. Responsible for: UI/UX design, illustration, branding, and frontend development</strong></p>
