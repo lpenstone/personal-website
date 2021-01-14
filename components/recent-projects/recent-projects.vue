@@ -5,9 +5,8 @@
         <x-card as="shadow" class="margin-bottom--20">
           <h3>Stylx</h3>
           <div class="margin-top--30 margin-bottom--20">
-            <p>A pre-styled component library & design system to help developers create websites (like this one) fast.</p>
-            <p>Customizations are made in the stylx.config file to suit your brand. The components do the rest.</p>
-            <p>Comes with <strong>dark mode, responsive styles, keyboard commands, and accessibility features</strong> out-of-the-box.</p>
+            <p>Creating a pre-styled component library and design system to help developers make beautiful web UI’s fast and without a designer.</p>
+            <p>Includes dark mode, responsive design, keyboard accessibility, and the ability to add branding customizations.</p>
             <div class="margin-top--20">
               <x-tag as="#888888" class="margin-top--10">Nuxt.js</x-tag>
               <x-tag as="#888888" class="margin-top--10">Design systems</x-tag>
@@ -17,6 +16,18 @@
           </div>
           <x-link href="https://www.stylx.dev" as="link-alt" icon="external-link-alt" target="_blank">Visit Stylx website</x-link>
         </x-card>
+        <x-card as="shadow" class="margin-bottom--20">
+          <h3>Portfolio</h3>
+          <div class="margin-top--20">
+            <p>This website was built in Nuxt.js using my component library, <x-link href="https://stylx.com" target="_blank">Stylx</x-link>.</p>
+            <p>The illustrations were created with Procreate.</p>
+            <div class="margin-top--20">
+              <x-tag as="#888888" class="margin-top--10">Nuxt.js</x-tag>
+              <x-tag as="#888888" class="margin-top--10">Illustration</x-tag>
+              <x-tag as="#888888" class="margin-top--10">UI Design</x-tag>
+            </div>
+          </div>
+        </x-card>
       </x-group>
     </div>
     <div class="col-sm-12 col-md-6">
@@ -24,15 +35,15 @@
         <x-card as="shadow" class="margin-bottom--20">
           <h3>ditto</h3>
           <div class="margin-top--30 margin-bottom--20">
-            <p>Video conferencing UI wrapper that allows guests to break off into smaller video call rooms, while maintaining context of the whole virtual event.</p>
-            <p>Users are able to customize their events with different rooms and features.</p>
-            <p>ditto is currently not an open source project.</p>
-            <p class="font-size--sm"><strong>Part of a 4 person team. Responsible for: UI/UX design, illustration, branding, and frontend development</strong></p>
+            <p class="font-size--sm"><strong>Personal venture - Part of a 4 person team.</strong></p>
+            <p>Ditto is a video conferencing UI wrapper that allows guests to navigate between video “rooms”.  It was built to improve remote events for family and friends.</p>
+            <p>I was the sole frontend developer: built the app in Vue.js with WebSockets and Jitsi API.
+            <p>I created the visual branding, designed all UI/UX, and illustrated the graphics.
             <div class="margin-top--20">
-              <x-tag as="#888888" class="margin-top--10">UI Design</x-tag>
+              <x-tag as="#888888" class="margin-top--10">UI/UX Design</x-tag>
               <x-tag as="#888888" class="margin-top--10">Vue.js</x-tag>
               <x-tag as="#888888" class="margin-top--10">Websockets</x-tag>
-              <x-tag as="#888888" class="margin-top--10">JAM Stack</x-tag>
+              <x-tag as="#888888" class="margin-top--10">Jitsi API</x-tag>
             </div>
           </div>
           <x-modal size="lg" buttonAs="link-alt" name="ditto-modal" label="View app screenshots">

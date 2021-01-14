@@ -98,6 +98,38 @@
               </div>
             </x-carousel-item>
             <x-carousel-item>
+              <h2 class="margin-bottom--20">Designer</h2>
+              <p>Designing UI's to be appealing, intuitive, and accessible.</p>
+              <p>Design style has been described as clean, modern, and hip, with a sprinkle of whimsy.</p>
+              <div class="margin-top--20">
+                <x-tag class="margin-top--10">
+                  UI/UX Design
+                  <x-tag-label>
+                    <p>Creating wireframes in <x-link href="https://www.figma.com/" target="_blank">Figma</x-link>, and bringing them to life on the web. The goal is to create a simple and delightful experience.</p>
+                  </x-tag-label>
+                </x-tag>
+                <x-tag class="margin-top--10">
+                  Illustration
+                  <x-tag-label>
+                    <p>Drawing illustrations using <x-link href="https://procreate.art/" target="_blank">Procreate</x-link> on my iPad.</p>
+                    <p>Illustration style can vary to suit the brand.</p>
+                  </x-tag-label>
+                </x-tag>
+                <x-tag class="margin-top--10">
+                  Branding
+                  <x-tag-label>
+                    <p>Understanding the target audience and building from there. Choosing a memorable colour palette and maintaining a consistent &amp; cohesive style.</p>
+                  </x-tag-label>
+                </x-tag>
+                <x-tag class="margin-top--10">
+                  Detail-oriented
+                  <x-tag-label>
+                    Sweating the small stuff... where appropriate.
+                  </x-tag-label>
+                </x-tag>
+              </div>
+            </x-carousel-item>
+            <x-carousel-item>
               <h2 class="margin-bottom--20">Instructor</h2>
               <p>Delivering weekly lectures to students new to web development at one of Canada's leading tech education companies</p>
               <p>Fostering an inclusive and casual learning environment</p>
