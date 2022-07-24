@@ -14,12 +14,12 @@
               <x-tag as="#888888" class="margin-top--10">Documentation</x-tag>
             </div>
           </div>
-          <x-link href="https://www.stylx.dev" as="link-alt" icon="external-link-alt" target="_blank">Visit Stylx website</x-link>
+          <x-link href="https://stylx.netlify.app" as="link-alt" icon="external-link-alt" target="_blank">Visit Stylx website</x-link>
         </x-card>
         <x-card as="shadow" class="margin-bottom--20">
           <h3>Portfolio</h3>
           <div class="margin-top--20">
-            <p>This website was built in Nuxt.js using my component library, <x-link href="https://stylx.com" target="_blank">Stylx</x-link>.</p>
+            <p>This website was built in Nuxt.js using my component library, <x-link href="https://stylx.netlify.app" target="_blank">Stylx</x-link>.</p>
             <p>The illustrations were created with Procreate.</p>
             <div class="margin-top--20">
               <x-tag as="#888888" class="margin-top--10">Nuxt.js</x-tag>

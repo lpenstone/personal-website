@@ -8,7 +8,7 @@
               <h1>Welcome 👋</h1>
               <p>I'm Laura.</p>
               <p>A frontend developer with a wide range of artistic hobbies and interests.</p>
-              <p>Currently working in Toronto, Canada 🇨🇦 with my <x-link href="https://en.wikipedia.org/wiki/Potcake_dog" target="_blank">potcake</x-link> dog Kipper.</p>
+              <p>Currently working in Kelowna, British Columbia 🇨🇦 with my <x-link href="https://en.wikipedia.org/wiki/Potcake_dog" target="_blank">potcake</x-link> dog Kipper.</p>
               <x-see-more label="..." as="plain" class="margin-top--20">
                 <strong>More?!</strong>
                 <ul class="margin-top--10">
@@ -53,7 +53,7 @@
           <x-carousel height="248" name="about-me">
             <x-carousel-item>
               <h2 class="margin-bottom--20">Frontend Developer</h2>
-              <p>3+ years of industry experience.</p>
+              <p>5 years of industry experience.</p>
               <p>Writing scalable, tested, component-based code.</p>
               <p>Developing UI's with a focus on accessibility and delight.</p>
               <div class="margin-top--20">
@@ -92,7 +92,7 @@
                 <x-tag class="margin-top--10">
                   Design systems
                   <x-tag-label>
-                    <p>Developing design systems to ensure projects are set-up for success. Build faster, cleaner, more consistently, and with scale in mind. I've built <x-link href="https://www.stylx.dev/" target="_blank">my own component library.</x-link></p>
+                    <p>Developing design systems to ensure projects are set-up for success. Build faster, cleaner, more consistently, and with scale in mind. I've built <x-link href="https://stylx.netlify.app/" target="_blank">my own component library.</x-link></p>
                   </x-tag-label>
                 </x-tag>
               </div>

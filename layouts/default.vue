@@ -21,7 +21,7 @@
         <x-content>
           <div class="footer__wrap">
             <div class="footer--left">
-              <span class="font-size--sm">©2021 Laura Penstone</span>
+              <span class="font-size--sm">©2022 Laura Penstone</span>
             </div>
             <div class="footer--right">
               <x-social></x-social>
