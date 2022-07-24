@@ -11,7 +11,7 @@
               <x-link as="link-alt" :to="{name: 'art'}">Art</x-link>
             </li>
             <li>
-              <x-link as="link-alt" href="https://www.etsy.com/ca/shop/LPDesignsCanada" target="_blank">Shop</x-link>
+              <x-link as="link-alt" icon="external-link-alt" href="https://www.etsy.com/ca/shop/LPDesignsCanada" target="_blank">Shop</x-link>
             </li>
           </ul>
         </template>
